@@ -8,6 +8,9 @@ const errorHandler = require('./middlewares/errorHandler');
 const { connectMongo } = require('./config/db.mongo');
 const { connectPostgres } = require('./config/db.pg');
 const reviewRoutes = require('./routes/reviewRoutes');
+const locationRoutes = require('./routes/locationRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
+const kpiRoutes = require('./routes/kpiRoutes');
 dotenv.config();
 
 connectMongo();
@@ -20,6 +23,11 @@ app.use(morgan('dev'));
 app.use(rateLimiter);
 app.use(logger);
 
+
+
+app.use('/api/locations', locationRoutes);
+app.use('/api/categories', categoryRoutes);
+app.use('/api/kpi', kpiRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/partner', require('./routes/partnerRoutes'));

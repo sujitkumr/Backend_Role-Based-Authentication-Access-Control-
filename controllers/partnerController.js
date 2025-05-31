@@ -3,6 +3,8 @@ const partnerService = require('../services/partnerService');
 const { sendResponse } = require('../utils/responseUtil');
 
 exports.submitVerification = async (req, res) => {
+  console.log('User ID from token:', req.user.id);
+
   try {
     const partner = await partnerService.submitVerification(req.user.id, req.body);
     return res.status(200).json({

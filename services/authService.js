@@ -1,10 +1,12 @@
-// services/authService.js
 
-const bcrypt = require('bcryptjs');
+const users = {}; 
+const Admin = require('../models/pg/Admin');
+const Client = require('../models/mongo/Partner');
 const Partner = require('../models/mongo/Partner');
+const bcrypt = require('bcryptjs');
 const { generateToken } = require('../utils/jwtUtil');
 
-const users = {}; // in-memory store for OTP (demo purpose)
+
 
 exports.signupUser = async ({ email, password, role }) => {
   const existing = await Partner.findOne({ email });

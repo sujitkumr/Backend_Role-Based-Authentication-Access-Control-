@@ -6,10 +6,14 @@ const roleMiddleware = require('../middlewares/roleMiddleware');
 
 router.use(authMiddleware);
 
+// Anyone can get reviews by partner
+router.get('/:partnerId', reviewController.getReviewsByPartner);
 
+// Clients can create reviews
 router.post('/', roleMiddleware('client'), reviewController.createReview);
 
-
-router.get('/:partnerId', reviewController.getReviewsByPartner);
+// Clients and Admin can update/delete their own reviews
+router.put('/:id', roleMiddleware(['client', 'admin']), reviewController.updateReview);
+router.delete('/:id', roleMiddleware(['client', 'admin']), reviewController.deleteReview);
 
 module.exports = router;

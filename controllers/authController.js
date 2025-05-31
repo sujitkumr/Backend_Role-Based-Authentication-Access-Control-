@@ -33,6 +33,7 @@ exports.login = async (req, res) => {
   }
 };
 
+
 exports.otpRequest = (req, res) => {
   const { email } = req.body;
 

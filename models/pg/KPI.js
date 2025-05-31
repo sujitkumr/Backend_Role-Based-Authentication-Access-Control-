@@ -2,7 +2,7 @@ const { pool } = require('../../config/db.pg');
 
 class KPI {
   static async getStats() {
-    // example counts for demo purpose
+    
     const { rows: clients } = await pool.query('SELECT COUNT(*) FROM clients');
     const { rows: partners } = await pool.query('SELECT COUNT(*) FROM partners');
     const { rows: pendingVerifications } = await pool.query(
