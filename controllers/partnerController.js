@@ -1,4 +1,3 @@
-// controllers/partnerController.js
 
 const partnerService = require('../services/partnerService');
 const { sendResponse } = require('../utils/responseUtil');

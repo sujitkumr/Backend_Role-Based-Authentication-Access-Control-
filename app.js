@@ -7,7 +7,7 @@ const logger = require('./middlewares/loger');
 const errorHandler = require('./middlewares/errorHandler');
 const { connectMongo } = require('./config/db.mongo');
 const { connectPostgres } = require('./config/db.pg');
-
+const reviewRoutes = require('./routes/reviewRoutes');
 dotenv.config();
 
 connectMongo();
@@ -20,6 +20,7 @@ app.use(morgan('dev'));
 app.use(rateLimiter);
 app.use(logger);
 
+app.use('/api/reviews', reviewRoutes);
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/partner', require('./routes/partnerRoutes'));
 app.use('/api/admin', require('./routes/adminRoutes'));

@@ -41,7 +41,7 @@ exports.otpRequest = (req, res) => {
   }
 
   const otp = authService.generateOtpForUser(email);
-  console.log(`OTP for ${email}: ${otp}`); // mock send
+  console.log(`OTP for ${email}: ${otp}`); 
   sendResponse(res, 200, true, 'OTP sent (mocked)');
 };
 

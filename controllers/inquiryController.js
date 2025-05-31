@@ -1,4 +1,3 @@
-// controllers/inquiryController.js
 
 const inquiryService = require('../services/inquiryService');
 const { sendResponse } = require('../utils/responseUtil');
