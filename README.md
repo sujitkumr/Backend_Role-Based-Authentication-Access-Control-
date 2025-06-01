@@ -3,7 +3,13 @@
 This project is a role-based modular backend system designed to simulate Pixisphere's backend architecture. It includes secure authentication, multi-role access control, smart lead management, vendor onboarding and verification, and admin-level moderation APIs.
 
 ---
+### API Documentation
 
+You can explore the full API endpoints and test them interactively using the Postman documentation here:
+
+[Postman API Docs](https://galactic-eclipse-617728.postman.co/workspace/007db7ad-04b3-457b-a1b1-dcc452b5a544/documentation/21769012-8d242946-6a39-4722-99fb-b2aeaa9900cc)
+
+---
 ## 🚀 Features
 
 ### ✅ Core Modules
@@ -79,12 +85,27 @@ This project is a role-based modular backend system designed to simulate Pixisph
 
 
 ---
+---
+
+### Architecture
+
+This project follows the **MVC (Model-View-Controller)** architectural pattern:
+
+- **Model:** Manages the data and business logic. Here, the mock API (`db.json` served by JSON Server) represents the Model, providing photographer data.
+- **View:** The React components and pages that render the user interface, including the Category Listing and Photographer Profile pages.
+- **Controller:** The logic that connects the Model and View. In this project, React hooks and Context API handle fetching data, managing state, filtering, sorting, and updating the UI dynamically.
+
+This separation of concerns helps keep the code organized, maintainable, and scalable.
+
+---
+
 ### My Profiles
 
 - [LinkedIn](https://www.linkedin.com/in/3233sujit-kumar-67b13321b/)
 - [GitHub](https://github.com/sujitkumr)
 - [LeetCode](https://leetcode.com/sujitkymar101/)
 - Email: [sujitkymar101@gmail.com](mailto:sujitkymar101@gmail.com)
+
 ## 🧪 Setup Instructions
 
 ### 🔨 Prerequisites
