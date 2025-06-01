@@ -79,7 +79,12 @@ This project is a role-based modular backend system designed to simulate Pixisph
 
 
 ---
+### My Profiles
 
+- [LinkedIn](https://www.linkedin.com/in/3233sujit-kumar-67b13321b/)
+- [GitHub](https://github.com/sujitkumr)
+- [LeetCode](https://leetcode.com/sujitkymar101/)
+- Email: [sujitkymar101@gmail.com](mailto:sujitkymar101@gmail.com)
 ## 🧪 Setup Instructions
 
 ### 🔨 Prerequisites
